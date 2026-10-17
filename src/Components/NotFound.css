@@ -1,0 +1,8 @@
+main > article > h1 {
+  margin-bottom: 16px;
+}
+
+main > article > a {
+  color: #a45d3e;
+  font-weight: 700;
+}

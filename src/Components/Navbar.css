@@ -1,0 +1,42 @@
+body > div > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px max(24px, calc((100vw - 1120px) / 2));
+  background: #f8f5ee;
+  border-bottom: 1px solid #e9e4d9;
+}
+
+body > div > header > a {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+body > div > header > a span {
+  margin-right: 8px;
+}
+
+body > div > header nav {
+  display: flex;
+  gap: 30px;
+  color: #59645b;
+  font-size: 15px;
+}
+
+body > div > header nav a:hover {
+  color: #b16848;
+}
+
+@media (max-width: 500px) {
+  body > div > header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px 20px;
+  }
+
+  body > div > header nav {
+    gap: 20px;
+  }
+}

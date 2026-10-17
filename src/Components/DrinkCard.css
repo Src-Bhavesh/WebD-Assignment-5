@@ -1,0 +1,47 @@
+main > section > section > article {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+  border: 1px solid #e8e2d7;
+  border-radius: 8px;
+  background: white;
+}
+
+main > section > section > article img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.25;
+  object-fit: cover;
+}
+
+main > section > section > article button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: white;
+  color: #b16848;
+  font-size: 23px;
+}
+
+main > section > section > article h2,
+main > section > section > article a {
+  margin-right: 18px;
+  margin-left: 18px;
+}
+
+main > section > section > article h2 {
+  margin-top: 16px;
+  margin-bottom: 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 21px;
+}
+
+main > section > section > article a {
+  color: #a45d3e;
+  font-size: 14px;
+  font-weight: 700;
+}

@@ -1,0 +1,38 @@
+main > article:has(> img) {
+  display: grid;
+  grid-template-columns: minmax(260px, 440px) 1fr;
+  align-items: start;
+  gap: 44px;
+}
+
+main > article:has(> img) > button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  padding: 10px 16px;
+  border: 1px solid #d8d4ca;
+  border-radius: 5px;
+  background: transparent;
+  color: #24302a;
+}
+
+main > article:has(> img) > img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+main > article:has(> img) > section > p {
+  color: #687168;
+  line-height: 1.7;
+}
+
+main > article:has(> img) li {
+  margin: 10px 0;
+  color: #59645b;
+}
+
+@media (max-width: 700px) {
+  main > article:has(> img) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
