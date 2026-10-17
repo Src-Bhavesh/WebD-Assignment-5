@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import DrinkCard from './DrinkCard'
+import ErrorMessage from './ErrorMessage'
 import './Drinks.css'
 
 function Drinks({ drinks, err, favorites,changefav}){
@@ -24,7 +25,7 @@ function Drinks({ drinks, err, favorites,changefav}){
             onChange={(event)=>setSearch(event.target.value)}
           />
         </header>
-        {err && <p>{err}</p>}
+        {err && <ErrorMessage err={err} />}
         {!err && yedrinks.length === 0 && <p>No drinks found</p>}
         <section>
           {yedrinks.map((drink) => {
