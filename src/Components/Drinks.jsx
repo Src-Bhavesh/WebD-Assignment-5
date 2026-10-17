@@ -2,7 +2,7 @@ import { useState } from 'react'
 import DrinkCard from './DrinkCard'
 import './Drinks.css'
 
-function Drinks({ drinks, favorites,changefav}){
+function Drinks({ drinks, err, favorites,changefav}){
   const [search, setSearch] = useState('')
   const yedrinks=[]
 
@@ -24,7 +24,8 @@ function Drinks({ drinks, favorites,changefav}){
             onChange={(event)=>setSearch(event.target.value)}
           />
         </header>
-        {yedrinks.length === 0 && <p>No drinks found.</p>}
+        {err && <p>{err}</p>}
+        {!err && yedrinks.length === 0 && <p>No drinks found</p>}
         <section>
           {yedrinks.map((drink) => {
             let isfav = false

@@ -6,7 +6,7 @@ function NotFound() {
     <main>
       <article>
         <h1>Page not found</h1>
-        <Link to='/'>Go to Home</Link>
+        <Link to='/'>Go  Home</Link>
       </article>
     </main>
   )

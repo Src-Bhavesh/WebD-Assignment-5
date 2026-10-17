@@ -11,10 +11,17 @@ import NotFound from './Components/NotFound'
 function App(){
   const [drinks, setDrinks] = useState([])
   const [favorites, setFavorites] = useState([])
+  const [err, seterr] = useState('')
 
   useEffect(()=>{
     const getDrinks = async()=>{
-      const res = await fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
+      const res = await fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic').catch(() => null)
+
+      if (!res || !res.ok) {
+        seterr('drinks load nhi ho rhaaaa ')
+        return
+      }
+
       const data = await res.json()
       setDrinks(data.drinks)
     }
@@ -55,6 +62,7 @@ function App(){
           element={
             <Drinks
               drinks={drinks}
+              err={err}
               favorites={favorites}
               changefav={changefav}
             />
